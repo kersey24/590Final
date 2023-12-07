@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit; // Ensure this line is included
 
 public class CrystalSocketInteraction : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class CrystalSocketInteraction : MonoBehaviour
             if (counter == 6)
             {
                 // rotate the wallToDrop.
+                GameObject.Find("Opening Door").GetComponent<XRGrabInteractable>().enabled = true;
                 wallToDrop.transform.Rotate(0, 90, 0);
             }
         }
