@@ -22,6 +22,7 @@ public class OnTrigger : MonoBehaviour
     {
         if (CanTrigger(other.gameObject))
             OnEnter?.Invoke(other);
+        transform.Rotate(180f, 0, 0);
     }
 
     private void OnTriggerExit(Collider other)
